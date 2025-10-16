@@ -1,7 +1,22 @@
-<p>post-list Creado Correctamente!</p>
 <h2>Posts</h2>
-<ul>
-    @for (post of posts$ | async; track post.id){
-        <li>{{post.title}}</li>
+
+<table class="posts-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>UserID</th>
+      <th>Título</th>
+      <th>Contenido</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (post of posts$ | async; track post.id) {
+      <tr>
+        <td>{{ post.id }}</td>
+        <td>{{ post.userId }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.body }}</td>
+      </tr>
     }
-</ul>
+  </tbody>
+</table>

@@ -1,4 +1,4 @@
-/* users.component.css */
+/* post-list.component.css */
 
 h2 {
   text-align: center;
@@ -6,7 +6,8 @@ h2 {
   color: #2c3e50;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.users-table {
+
+.posts-table {
   width: 100%;
   max-width: 1400px;
   margin: 1.5rem auto;
@@ -17,14 +18,14 @@ h2 {
   overflow: hidden;
 }
 
-.users-table th,
-.users-table td {
+.posts-table th,
+.posts-table td {
   padding: 14px 12px;
   text-align: left;
   border-bottom: 1px solid #eaeaea;
 }
 
-.users-table th {
+.posts-table th {
   background-color: #f8f9fa;
   color: #2c3e50;
   font-weight: 600;
@@ -33,30 +34,61 @@ h2 {
   letter-spacing: 0.5px;
 }
 
-.users-table tr:last-child td {
+.posts-table tr:last-child td {
   border-bottom: none;
 }
 
-.users-table tr:hover {
+.posts-table tr:hover {
   background-color: #f9fbfd;
 }
 
-.users-table td {
+.posts-table td {
   font-size: 0.95rem;
   color: #34495e;
 }
 
+/* Columna ID más estrecha */
+.posts-table th:nth-child(1),
+.posts-table td:nth-child(1) {
+  width: 60px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Columna User ID más estrecha */
+.posts-table th:nth-child(2),
+.posts-table td:nth-child(2) {
+  width: 80px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Columna Título con ancho medio */
+.posts-table th:nth-child(3),
+.posts-table td:nth-child(3) {
+  width: 30%;
+  font-weight: 500;
+}
+
+/* Columna Contenido más ancha */
+.posts-table th:nth-child(4),
+.posts-table td:nth-child(4) {
+  width: auto;
+}
+
 /* Responsive: ajustar en pantallas pequeñas */
 @media (max-width: 900px) {
-  .users-table th,
-  .users-table td {
+  .posts-table th,
+  .posts-table td {
     padding: 10px 8px;
     font-size: 0.85rem;
   }
 
-  /* Opcional: ocultar columnas menos críticas en móvil */
-  .users-table th:nth-child(n+6),
-  .users-table td:nth-child(n+6) {
+  /* Ocultar User ID y Contenido en móvil */
+  .posts-table th:nth-child(2),
+  .posts-table td:nth-child(2),
+  .posts-table th:nth-child(4),
+  .posts-table td:nth-child(4) {
     display: none;
   }
 }

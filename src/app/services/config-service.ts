@@ -14,6 +14,7 @@ export class ConfigService {
   getPost(){
     return this.http.get<Post[]>(this.apiUrl);
   }
+  
   getUser(){
     return this.http.get<User[]>(this.userUrl);
   }

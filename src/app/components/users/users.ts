@@ -9,6 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './users.css'
 })
 export class Users {
-private configService = inject(ConfigService);
-users$ = this.configService.getUser();
+  private configService = inject(ConfigService);
+  users$ = this.configService.getUser();
 }

@@ -6,7 +6,7 @@ import { Users } from "./components/users/users";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, PostList, CommonModule, Users],
+  imports: [RouterOutlet, CommonModule, PostList, Users],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
